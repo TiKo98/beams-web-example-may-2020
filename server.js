@@ -2,7 +2,7 @@ const express = require('express');
 const PushNotifications = require('@pusher/push-notifications-server');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const beamsClient = new PushNotifications({
   instanceId: 'beb6f539-ed11-4a61-a2ea-845292c64db1',
   secretKey: 'FBA6DBEF6E9CE11B8D17392752163A09498252C67CEA6B604B40EEC9E5389D43',
